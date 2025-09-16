@@ -2,7 +2,7 @@ import AppLayout from '@/layout/AppLayout.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
             path: '/',
@@ -47,7 +47,7 @@ const router = createRouter({
                     path: '/pages/films',
                     name: 'films',
                     component: () => import('@/views/pages/FilmsSection.vue')
-                },
+                }
             ]
         }
     ]
