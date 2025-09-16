@@ -1,0 +1,1 @@
+import{_ as s,a as t,b as o,f as a}from"./index-BYP5aXVn.js";const c={},n={className:"card"};function r(d,e){return a(),t("div",n,e[0]||(e[0]=[o("div",{class:"font-semibold text-xl mb-4"},"Empty Page",-1)]))}const l=s(c,[["render",r]]);export{l as default};
