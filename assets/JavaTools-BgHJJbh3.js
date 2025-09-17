@@ -1,4 +1,4 @@
-import{_ as e,a as n,g as s,f as o}from"./index-BtxGKKnu.js";const r={},a={className:"card p-4"};function c(m,t){return o(),n("div",a,t[0]||(t[0]=[s(`<div class="flex items-center mb-4"><i class="pi pi-fw pi-bolt text-orange-500 mr-2"></i><h1 class="font-semibold text-xl">Outils avancés</h1></div><h2 class="font-semibold text-lg mt-4 mb-2">Exceptions</h2><pre class="bg-gray-100 p-3 rounded-lg text-sm"><code>try {
+import{au as e,c as n,e as s,a as o}from"./index-DCMV4SLN.js";const r={},a={className:"card p-4"};function c(m,t){return o(),n("div",a,t[0]||(t[0]=[s(`<div class="flex items-center mb-4"><i class="pi pi-fw pi-bolt text-orange-500 mr-2"></i><h1 class="font-semibold text-xl">Outils avancés</h1></div><h2 class="font-semibold text-lg mt-4 mb-2">Exceptions</h2><pre class="bg-gray-100 p-3 rounded-lg text-sm"><code>try {
     int x = 10 / 0;
 } catch (ArithmeticException e) {
     System.out.println(&quot;Erreur : &quot; + e.getMessage());

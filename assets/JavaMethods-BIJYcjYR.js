@@ -1,4 +1,4 @@
-import{_ as e,a as s,g as n,f as o}from"./index-BtxGKKnu.js";const a={},r={className:"card p-4"};function i(l,t){return o(),s("div",r,t[0]||(t[0]=[n(`<div class="flex items-center mb-4"><i class="pi pi-fw pi-cog text-purple-500 mr-2"></i><h1 class="font-semibold text-xl">Méthodes &amp; Tableaux</h1></div><h2 class="font-semibold text-lg mt-4 mb-2">Définir une méthode</h2><pre class="bg-gray-100 p-3 rounded-lg text-sm"><code>public static int addition(int a, int b) {
+import{au as e,c as s,e as n,a as o}from"./index-DCMV4SLN.js";const a={},r={className:"card p-4"};function i(l,t){return o(),s("div",r,t[0]||(t[0]=[n(`<div class="flex items-center mb-4"><i class="pi pi-fw pi-cog text-purple-500 mr-2"></i><h1 class="font-semibold text-xl">Méthodes &amp; Tableaux</h1></div><h2 class="font-semibold text-lg mt-4 mb-2">Définir une méthode</h2><pre class="bg-gray-100 p-3 rounded-lg text-sm"><code>public static int addition(int a, int b) {
     return a + b;
 }</code></pre><h2 class="font-semibold text-lg mt-4 mb-2">Surcharge de méthodes</h2><pre class="bg-gray-100 p-3 rounded-lg text-sm"><code>public static int addition(int a, int b, int c) {
     return a + b + c;
