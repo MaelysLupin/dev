@@ -1,1 +1,0 @@
-import{_ as s,a as t,b as a,f as o}from"./index-vOXFlFVI.js";const c={},r={className:"card"};function n(l,e){return o(),t("div",r,e[0]||(e[0]=[a("div",{class:"font-semibold text-xl mb-4"},"Flux",-1)]))}const _=s(c,[["render",n]]);export{_ as default};
