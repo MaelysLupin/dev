@@ -1,4 +1,4 @@
-import{_ as t,a as n,g as o,f as s}from"./index-BtxGKKnu.js";const a={},r={className:"card p-4"};function l(i,e){return s(),n("div",r,e[0]||(e[0]=[o(`<div class="flex items-center mb-4"><i class="pi pi-fw pi-users text-yellow-500 mr-2"></i><h1 class="font-semibold text-xl">Programmation Orientée Objet</h1></div><h2 class="font-semibold text-lg mt-4 mb-2">Classes &amp; Objets</h2><pre class="bg-gray-100 p-3 rounded-lg text-sm"><code>class Personne {
+import{au as t,c as n,e as o,a as s}from"./index-DCMV4SLN.js";const a={},r={className:"card p-4"};function l(i,e){return s(),n("div",r,e[0]||(e[0]=[o(`<div class="flex items-center mb-4"><i class="pi pi-fw pi-users text-yellow-500 mr-2"></i><h1 class="font-semibold text-xl">Programmation Orientée Objet</h1></div><h2 class="font-semibold text-lg mt-4 mb-2">Classes &amp; Objets</h2><pre class="bg-gray-100 p-3 rounded-lg text-sm"><code>class Personne {
     String nom;
     int age;
 
