@@ -1,0 +1,1 @@
+import{_ as r,a as t,b as e,f as a}from"./index-BtxGKKnu.js";const c={},o={className:"card p-4"};function n(i,s){return a(),t("div",o,s[0]||(s[0]=[e("div",{class:"flex items-center mb-4"},[e("i",{class:"pi pi-fw pi-shield text-red-500 mr-2"}),e("h1",{class:"font-semibold text-xl"},"Erreurs courantes")],-1)]))}const d=r(c,[["render",n]]);export{d as default};

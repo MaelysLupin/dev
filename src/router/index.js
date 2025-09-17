@@ -57,6 +57,11 @@ const router = createRouter({
                     path: '/pages/tools',
                     name: 'Outils avancés',
                     component: () => import('@/views/pages/JavaTools.vue')
+                },
+                {
+                    path: '/pages/errors',
+                    name: 'Erreurs courantes',
+                    component: () => import('@/views/pages/JavaErrors.vue')
                 }
             ]
         }

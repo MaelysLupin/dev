@@ -17,6 +17,7 @@ const model = ref([
             { label: 'Méthodes & Tableaux', icon: 'pi pi-fw pi-cog', to: '/pages/methodes' },
             { label: 'Programmation Orientée Objet', icon: 'pi pi-fw pi-users', to: '/pages/poo' },
             { label: 'Outils avancés', icon: 'pi pi-fw pi-bolt', to: '/pages/tools' },
+            { label: 'Erreurs courantes', icon: 'pi pi-fw pi-shield', to: '/pages/errors' },
 
             // Autre
             { label: 'Table', icon: 'pi pi-fw pi-table', to: '/uikit/table' },
