@@ -1,0 +1,1 @@
+import{_ as t,a as o,b as a,f as s}from"./index-vOXFlFVI.js";const r={},n={className:"card"};function c(d,e){return s(),o("div",n,e[0]||(e[0]=[a("div",{class:"font-semibold text-xl mb-4"},"Programmation Orientée Objet",-1)]))}const m=t(r,[["render",c]]);export{m as default};
