@@ -34,19 +34,29 @@ const router = createRouter({
                     component: () => import('@/views/pages/Empty.vue')
                 },
                 {
-                    path: '/pages/livres',
-                    name: 'livres',
-                    component: () => import('@/views/pages/LivreSection.vue')
+                    path: '/pages/basics',
+                    name: 'Basics',
+                    component: () => import('@/views/pages/JavaBasic.vue')
                 },
                 {
-                    path: '/pages/series',
-                    name: 'series',
-                    component: () => import('@/views/pages/SeriesSection.vue')
+                    path: '/pages/flux',
+                    name: 'Boucles/conditions',
+                    component: () => import('@/views/pages/JavaFlux.vue')
                 },
                 {
-                    path: '/pages/films',
-                    name: 'films',
-                    component: () => import('@/views/pages/FilmsSection.vue')
+                    path: '/pages/methodes',
+                    name: 'Méthodes & Tableaux',
+                    component: () => import('@/views/pages/JavaMethods.vue')
+                },
+                {
+                    path: '/pages/poo',
+                    name: 'Programmation Orientée Objet',
+                    component: () => import('@/views/pages/JavaPoo.vue')
+                },
+                {
+                    path: '/pages/tools',
+                    name: 'Outils avancés',
+                    component: () => import('@/views/pages/JavaTools.vue')
                 }
             ]
         }

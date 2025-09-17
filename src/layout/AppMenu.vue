@@ -9,17 +9,21 @@ const model = ref([
         items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
     },
     {
-        label: 'Suivi',
+        label: 'Dev',
         items: [
-            { label: 'Livres', icon: 'pi pi-fw pi-book', to: '/pages/livres' },
-            { label: 'Films', icon: 'pi pi-fw pi-video', to: '/pages/films' },
-            { label: 'Séries', icon: 'pi pi-fw pi-play-circle', to: '/pages/series' },
+            // Java
+            { label: 'Basics', icon: 'pi pi-fw pi-book', to: '/pages/basics' },
+            { label: 'Boucles/conditions', icon: 'pi pi-fw pi-share-alt', to: '/pages/flux' },
+            { label: 'Méthodes & Tableaux', icon: 'pi pi-fw pi-cog', to: '/pages/methodes' },
+            { label: 'Programmation Orientée Objet', icon: 'pi pi-fw pi-users', to: '/pages/poo' },
+            { label: 'Outils avancés', icon: 'pi pi-fw pi-bolt', to: '/pages/tools' },
+
+            // Autre
             { label: 'Table', icon: 'pi pi-fw pi-table', to: '/uikit/table' },
             { label: 'List', icon: 'pi pi-fw pi-list', to: '/uikit/list' },
-            { label: 'Misc', icon: 'pi pi-fw pi-circle', to: '/uikit/misc' },
-
+            { label: 'Misc', icon: 'pi pi-fw pi-circle', to: '/uikit/misc' }
         ]
-    },
+    }
 
     // {
     //     label: 'Hierarchy',
