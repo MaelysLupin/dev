@@ -34,34 +34,59 @@ const router = createRouter({
                     component: () => import('@/views/pages/Empty.vue')
                 },
                 {
+                    path: '/pages/installation',
+                    name: 'Installation',
+                    component: () => import('@/views/pages/Java/JavaInstall.vue')
+                },
+                {
                     path: '/pages/basics',
                     name: 'Basics',
-                    component: () => import('@/views/pages/JavaBasic.vue')
+                    component: () => import('@/views/pages/Java/JavaBasic.vue')
                 },
                 {
                     path: '/pages/flux',
                     name: 'Boucles/conditions',
-                    component: () => import('@/views/pages/JavaFlux.vue')
+                    component: () => import('@/views/pages/Java/JavaFlux.vue')
                 },
                 {
                     path: '/pages/methodes',
                     name: 'Méthodes & Tableaux',
-                    component: () => import('@/views/pages/JavaMethods.vue')
+                    component: () => import('@/views/pages/Java/JavaMethods.vue')
                 },
                 {
                     path: '/pages/poo',
                     name: 'Programmation Orientée Objet',
-                    component: () => import('@/views/pages/JavaPoo.vue')
+                    component: () => import('@/views/pages/Java/JavaPoo.vue')
                 },
                 {
                     path: '/pages/tools',
                     name: 'Outils avancés',
-                    component: () => import('@/views/pages/JavaTools.vue')
+                    component: () => import('@/views/pages/Java/JavaTools.vue')
+                },
+                {
+                    path: '/pages/belote',
+                    name: 'Belote',
+                    component: () => import('@/views/pages/BeloteCalculator.vue')
+                },
+                {
+                    path: '/pages/recetteTemplate',
+                    name: 'Recette',
+                    component: () => import('@/views/pages/Recettes/AirFryer/RecetteTemplate.vue')
+                },
+                {
+                    path: '/pages/PateCarbo',
+                    name: 'Pates Carbonara',
+                    component: () => import('@/views/pages/Recettes/Classique/PateCarbo.vue')
+                },
+                {
+                    path: '/pages/PatesBolo',
+                    name: 'Pâtes Carbonara',
+                    component: () => import('@/views/pages/Recettes/Classique/PatesBolo.vue')
                 },
                 {
                     path: '/pages/errors',
                     name: 'Erreurs courantes',
-                    component: () => import('@/views/pages/JavaErrors.vue')
+                    component: () => import('@/views/pages/Java/JavaErrors.vue')
                 }
             ]
         }
