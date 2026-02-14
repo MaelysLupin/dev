@@ -2,12 +2,18 @@
     <div class="card dark:bg-gray-700 col-span-12 xl:col-span-6 flex flex-col gap-6 p-6 rounded-xl shadow-md">
         <h1 class="text-2xl font-bold text-center text-gray-900 dark:text-gray-100">Compteur de points - Belote</h1>
 
+        <!-- Champs pour modifier le nom des équipes -->
+        <div class="flex gap-4 justify-center mb-4">
+            <input type="text" v-model="teamAName" placeholder="Nom Équipe A" class="border rounded-lg p-2 w-40 text-center dark:bg-gray-700" />
+            <input type="text" v-model="teamBName" placeholder="Nom Équipe B" class="border rounded-lg p-2 w-40 text-center dark:bg-gray-700" />
+        </div>
+
         <!-- SCORES -->
         <div class="flex flex-col md:flex-row gap-10 justify-center">
             <!-- ÉQUIPE A -->
             <div class="flex flex-col gap-6 text-center items-center">
                 <div class="flex-1 card p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
-                    <h2 class="text-xl font-semibold">Équipe A</h2>
+                    <h2 class="text-xl font-semibold">{{ teamAName }}</h2>
                     <div class="text-4xl font-bold">{{ totalA }}</div>
                 </div>
 
@@ -23,7 +29,7 @@
             <!-- ÉQUIPE B -->
             <div class="flex flex-col gap-6 text-center items-center">
                 <div class="flex-1 card p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
-                    <h2 class="text-xl font-semibold">Équipe B</h2>
+                    <h2 class="text-xl font-semibold">{{ teamBName }}</h2>
                     <div class="text-4xl font-bold">{{ totalB }}</div>
                 </div>
 
@@ -51,8 +57,8 @@
                 <thead>
                     <tr class="bg-gray-200 dark:bg-gray-600">
                         <th>#</th>
-                        <th>Équipe A</th>
-                        <th>Équipe B</th>
+                        <th>{{ teamAName }}</th>
+                        <th>{{ teamBName }}</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -61,11 +67,11 @@
                         <td>{{ i + 1 }}</td>
 
                         <td>
-                            <input type="number" v-model.number="r.a" @input="normalizeRound(i)" class="w-20 text-center border rounded" />
+                            <input type="number" v-model.number="r.a" @input="normalizeRound(i, 'A')" class="w-20 text-center border rounded" />
                         </td>
 
                         <td>
-                            <input type="number" v-model.number="r.b" @input="normalizeRound(i)" class="w-20 text-center border rounded" />
+                            <input type="number" v-model.number="r.b" @input="normalizeRound(i, 'B')" class="w-20 text-center border rounded" />
                         </td>
 
                         <td>
@@ -83,12 +89,15 @@ import { computed, ref } from 'vue';
 
 const TOTAL_POINTS = 162;
 
+// noms dynamiques
+const teamAName = ref('Équipe A');
+const teamBName = ref('Équipe B');
+
 const roundA = ref(0);
 const roundB = ref(0);
-
 const rounds = ref([]);
 
-// Totaux auto
+// Totaux
 const totalA = computed(() => rounds.value.reduce((sum, r) => sum + r.a, 0));
 const totalB = computed(() => rounds.value.reduce((sum, r) => sum + r.b, 0));
 
@@ -121,16 +130,13 @@ function normalizeRound(index, edited) {
     let a = Number(r.a) || 0;
     let b = Number(r.b) || 0;
 
-    // Clamp
     a = Math.max(0, Math.min(TOTAL_POINTS, a));
     b = Math.max(0, Math.min(TOTAL_POINTS, b));
 
     if (edited === 'A') {
-        // on garde A tel quel, on ajuste seulement B
         r.a = a;
         r.b = TOTAL_POINTS - a;
     } else if (edited === 'B') {
-        // on garde B tel quel, on ajuste seulement A
         r.b = b;
         r.a = TOTAL_POINTS - b;
     }
