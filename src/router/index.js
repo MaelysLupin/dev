@@ -69,9 +69,9 @@ const router = createRouter({
                     component: () => import('@/views/pages/BeloteCalculator.vue')
                 },
                 {
-                    path: '/pages/recetteTemplate',
-                    name: 'Recette',
-                    component: () => import('@/views/pages/Recettes/AirFryer/RecetteTemplate.vue')
+                    path: '/pages/pizzaWrap',
+                    name: 'Pizza Wrap',
+                    component: () => import('@/views/pages/Recettes/AirFryer/PizzaWrap.vue')
                 },
                 {
                     path: '/pages/PateCarbo',

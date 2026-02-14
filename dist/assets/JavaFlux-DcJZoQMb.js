@@ -1,4 +1,4 @@
-import{au as t,c as e,e as n,a as s}from"./index-xVLVh7qM.js";const r={},a={class:"card p-4"};function l(m,o){return s(),e("div",a,o[0]||(o[0]=[n(`<div class="flex items-center mb-4"><i class="pi pi-fw pi-share-alt text-green-500 mr-2"></i><h1 class="font-semibold text-xl">Contrôle de flux</h1></div><h2 class="font-semibold text-lg mt-4 mb-2">Conditions (if / else)</h2><pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm font-mono overflow-x-auto shadow-sm"><code>int age = 18;
+import{au as t,c as e,e as n,a as s}from"./index-D9tU75Zk.js";const r={},a={class:"card p-4"};function l(m,o){return s(),e("div",a,o[0]||(o[0]=[n(`<div class="flex items-center mb-4"><i class="pi pi-fw pi-share-alt text-green-500 mr-2"></i><h1 class="font-semibold text-xl">Contrôle de flux</h1></div><h2 class="font-semibold text-lg mt-4 mb-2">Conditions (if / else)</h2><pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg text-sm font-mono overflow-x-auto shadow-sm"><code>int age = 18;
 
 if (age &gt;= 18) {
     System.out.println(&quot;Majeur&quot;);
