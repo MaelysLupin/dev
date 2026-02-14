@@ -8,31 +8,26 @@
                 <h2 class="text-xl font-semibold">Équipe A</h2>
                 <div class="text-4xl font-bold">{{ totalA }}</div>
             </div>
+            <!-- SAISIE MANCHE -->
+            <!-- INPUT A + boutons centrés -->
+            <input type="number" v-model.number="roundA" class="border rounded-lg p-2 dark:bg-gray-700 mx-auto" />
+            <div class="flex gap-2 mt-2 justify-center">
+                <button @click="capot('A')" class="quick">Capot</button>
+                <button @click="contratPerdu('A')" class="quick red">Contrat perdu</button>
+            </div>
+        </div>
 
+        <div class="flex flex-col md:flex-row gap-6 text-center">
             <div class="flex-1 card p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
                 <h2 class="text-xl font-semibold">Équipe B</h2>
                 <div class="text-4xl font-bold">{{ totalB }}</div>
             </div>
-        </div>
-
-        <!-- SAISIE MANCHE -->
-        <div class="flex flex-col md:flex-row gap-6">
-            <!-- INPUT A + boutons centrés -->
-            <div class="flex-1 flex flex-col gap-2">
-                <input type="number" v-model.number="roundA" class="border rounded-lg p-2 dark:bg-gray-700 mx-auto" />
-                <div class="flex gap-2 mt-2 justify-center">
-                    <button @click="capot('A')" class="quick">Capot</button>
-                    <button @click="contratPerdu('A')" class="quick red">Contrat perdu</button>
-                </div>
-            </div>
-
+            <!-- SAISIE MANCHE -->
             <!-- INPUT B + boutons centrés -->
-            <div class="flex-1 flex flex-col gap-2">
-                <input type="number" v-model.number="roundB" class="border rounded-lg p-2 dark:bg-gray-700 mx-auto" />
-                <div class="flex gap-2 mt-2 justify-center">
-                    <button @click="capot('B')" class="quick">Capot</button>
-                    <button @click="contratPerdu('B')" class="quick red">Contrat perdu</button>
-                </div>
+            <input type="number" v-model.number="roundB" class="border rounded-lg p-2 dark:bg-gray-700 mx-auto" />
+            <div class="flex gap-2 mt-2 justify-center">
+                <button @click="capot('B')" class="quick">Capot</button>
+                <button @click="contratPerdu('B')" class="quick red">Contrat perdu</button>
             </div>
         </div>
 
