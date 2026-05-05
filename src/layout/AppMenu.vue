@@ -33,12 +33,7 @@ const model = ref([
             {
                 label: 'Air Fryer',
                 icon: 'pi pi-fw pi-receipt',
-                items: [{ label: 'Recette', icon: 'pi pi-fw pi-caret-right', to: '/pages/recetteTemplate' }]
-            },
-            {
-                label: 'Sauces',
-                icon: 'pi pi-fw pi-filter',
-                items: [{ label: 'Vinaigrette Balsamique', icon: 'pi pi-fw pi-caret-right', to: '/pages/VinaigretteBalsamique' }]
+                items: [{ label: 'Pizza wrap', icon: 'pi pi-fw pi-caret-right', to: '/pages/pizzaWrap' }]
             },
             {
                 label: 'Plat',
@@ -53,10 +48,7 @@ const model = ref([
             {
                 label: 'Dessert',
                 icon: 'pi pi-fw pi-objects-column',
-                items: [
-                    { label: 'Recette', icon: 'pi pi-fw pi-caret-right', to: '/pages/recetteTemplate' },
-                    { label: 'Recette', icon: 'pi pi-fw pi-caret-right', to: '/pages/recetteTemplate' }
-                ]
+                items: [{ label: 'Recette', icon: 'pi pi-fw pi-caret-right', to: '/pages/recetteTemplate' }]
             }
         ]
     },

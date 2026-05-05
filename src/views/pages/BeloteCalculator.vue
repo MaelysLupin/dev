@@ -20,13 +20,18 @@
                 </div>
 
                 <div class="flex flex-col items-center gap-2">
+                    <div v-if="bonusA" class="text-sm text-yellow-500">
+                        +{{ bonusA }} Belote
+                    </div>
                     <input type="number" v-model.number="roundA" min="0" max="162"
                         class="border rounded-lg p-2 dark:bg-gray-700 w-28 text-center" />
                     <div class="flex gap-2">
                         <button @click="capot('A')" class="quick">Capot</button>
                         <button @click="contratPerdu('A')" class="quick red">Contrat perdu</button>
+                        <button @click="belote('A')" class="quick blue">Belote</button>
                     </div>
                 </div>
+
             </div>
 
             <!-- ÉQUIPE B -->
@@ -37,12 +42,17 @@
                 </div>
 
                 <div class="flex flex-col items-center gap-2">
+                    <div v-if="bonusB" class="text-sm text-yellow-500">
+                        +{{ bonusB }} Belote
+                    </div>
                     <input type="number" v-model.number="roundB" min="0" max="162"
                         class="border rounded-lg p-2 dark:bg-gray-700 w-28 text-center" />
                     <div class="flex gap-2">
                         <button @click="capot('B')" class="quick">Capot</button>
                         <button @click="contratPerdu('B')" class="quick red">Contrat perdu</button>
+                        <button @click="belote('B')" class="quick blue">Belote</button>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -94,6 +104,8 @@
 import { computed, ref } from 'vue';
 
 const TOTAL_POINTS = 162;
+const BELOTE_POINTS = 20;
+const CAPOT_POINTS = 250;
 
 // noms dynamiques
 const teamAName = ref('Équipe A');
@@ -103,11 +115,18 @@ const roundA = ref(0);
 const roundB = ref(0);
 const rounds = ref([]);
 
+const bonusA = ref(0);
+const bonusB = ref(0);
+
 // Totaux
 const totalA = computed(() => rounds.value.reduce((sum, r) => sum + r.a, 0));
 const totalB = computed(() => rounds.value.reduce((sum, r) => sum + r.b, 0));
 
 function normalize(a, b) {
+    // CAS SPÉCIAL CAPOT
+    if (a === 250 && b === 0) return { a: 250, b: 0 };
+    if (b === 250 && a === 0) return { a: 0, b: 250 };
+
     a = Math.max(0, Math.min(TOTAL_POINTS, a));
     b = Math.max(0, Math.min(TOTAL_POINTS, b));
 
@@ -121,13 +140,22 @@ function normalize(a, b) {
 function addRound() {
     let a = Number(roundA.value) || 0;
     let b = Number(roundB.value) || 0;
-    if (a === 0 && b === 0) return;
+
+    if (a === 0 && b === 0 && bonusA.value === 0 && bonusB.value === 0) return;
 
     const r = normalize(a, b);
+
+    // Ajout des bonus belote
+    r.a += bonusA.value;
+    r.b += bonusB.value;
+
     rounds.value.push(r);
 
+    // reset
     roundA.value = 0;
     roundB.value = 0;
+    bonusA.value = 0;
+    bonusB.value = 0;
 }
 
 function normalizeRound(index, edited) {
@@ -135,6 +163,18 @@ function normalizeRound(index, edited) {
 
     let a = Number(r.a) || 0;
     let b = Number(r.b) || 0;
+
+    // CAS CAPOT
+    if (a === CAPOT_POINTS || b === CAPOT_POINTS) {
+        if (a === CAPOT_POINTS) {
+            r.a = CAPOT_POINTS;
+            r.b = 0;
+        } else {
+            r.a = 0;
+            r.b = CAPOT_POINTS;
+        }
+        return;
+    }
 
     a = Math.max(0, Math.min(TOTAL_POINTS, a));
     b = Math.max(0, Math.min(TOTAL_POINTS, b));
@@ -154,11 +194,19 @@ function deleteRound(index) {
 
 function capot(team) {
     if (team === 'A') {
-        roundA.value = 250;
+        roundA.value = CAPOT_POINTS;
         roundB.value = 0;
     } else {
-        roundB.value = 250;
+        roundB.value = CAPOT_POINTS;
         roundA.value = 0;
+    }
+}
+
+function belote(team) {
+    if (team === 'A') {
+        bonusA.value = BELOTE_POINTS;
+    } else {
+        bonusB.value = BELOTE_POINTS;
     }
 }
 
@@ -189,6 +237,10 @@ function reset() {
 
 .quick.red {
     background: #f97316;
+}
+
+.quick.blue {
+    background: #08a8b3;
 }
 
 .main {
