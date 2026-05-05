@@ -24,7 +24,7 @@ const model = ref([
         items: [
             {
                 label: 'Classiques',
-                icon: 'pi pi-fw pi-receipt',
+                icon: 'pi pi-fw pi-star',
                 items: [
                     { label: 'Pâtes Carbonara', icon: 'pi pi-fw pi-caret-right', to: '/pages/PateCarbo' },
                     { label: 'Pâtes bolognaises', icon: 'pi pi-fw pi-caret-right', to: '/pages/PatesBolo' }
@@ -33,22 +33,30 @@ const model = ref([
             {
                 label: 'Air Fryer',
                 icon: 'pi pi-fw pi-receipt',
-                items: [{ label: 'Pizza wrap', icon: 'pi pi-fw pi-caret-right', to: '/pages/pizzaWrap' }]
+                items: [{ label: 'Recette', icon: 'pi pi-fw pi-caret-right', to: '/pages/recetteTemplate' }]
             },
             {
-                label: 'Apéro',
-                icon: 'pi pi-fw pi-receipt',
-                items: [{ label: 'Recette', icon: 'pi pi-fw pi-objects-column', to: '/pages/recetteTemplate' }]
+                label: 'Sauces',
+                icon: 'pi pi-fw pi-filter',
+                items: [{ label: 'Vinaigrette Balsamique', icon: 'pi pi-fw pi-caret-right', to: '/pages/VinaigretteBalsamique' }]
             },
             {
                 label: 'Plat',
                 icon: 'pi pi-fw pi-receipt',
-                items: [{ label: 'Recette', icon: 'pi pi-fw pi-objects-column', to: '/pages/recetteTemplate' }]
+                items: [{ label: 'Recette', icon: 'pi pi-fw pi-caret-right', to: '/pages/recetteTemplate' }]
+            },
+            {
+                label: 'Sauces',
+                icon: 'pi pi-fw pi-filter',
+                items: [{ label: 'Vinaigrette Balsamique', icon: 'pi pi-fw pi-caret-right', to: '/pages/VinaigretteBalsamique' }]
             },
             {
                 label: 'Dessert',
-                icon: 'pi pi-fw pi-receipt',
-                items: [{ label: 'Recette', icon: 'pi pi-fw pi-objects-column', to: '/pages/recetteTemplate' }]
+                icon: 'pi pi-fw pi-objects-column',
+                items: [
+                    { label: 'Recette', icon: 'pi pi-fw pi-caret-right', to: '/pages/recetteTemplate' },
+                    { label: 'Recette', icon: 'pi pi-fw pi-caret-right', to: '/pages/recetteTemplate' }
+                ]
             }
         ]
     },

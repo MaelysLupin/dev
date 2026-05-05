@@ -4,8 +4,10 @@
 
         <!-- Champs pour modifier le nom des équipes -->
         <div class="flex gap-4 justify-center mb-4">
-            <input type="text" v-model="teamAName" placeholder="Nom Équipe A" class="border rounded-lg p-2 w-40 text-center dark:bg-gray-700" />
-            <input type="text" v-model="teamBName" placeholder="Nom Équipe B" class="border rounded-lg p-2 w-40 text-center dark:bg-gray-700" />
+            <input type="text" v-model="teamAName" placeholder="Nom Équipe A"
+                class="border rounded-lg p-2 w-40 text-center dark:bg-gray-700" />
+            <input type="text" v-model="teamBName" placeholder="Nom Équipe B"
+                class="border rounded-lg p-2 w-40 text-center dark:bg-gray-700" />
         </div>
 
         <!-- SCORES -->
@@ -18,7 +20,8 @@
                 </div>
 
                 <div class="flex flex-col items-center gap-2">
-                    <input type="number" v-model.number="roundA" min="0" max="162" class="border rounded-lg p-2 dark:bg-gray-700 w-28 text-center" />
+                    <input type="number" v-model.number="roundA" min="0" max="162"
+                        class="border rounded-lg p-2 dark:bg-gray-700 w-28 text-center" />
                     <div class="flex gap-2">
                         <button @click="capot('A')" class="quick">Capot</button>
                         <button @click="contratPerdu('A')" class="quick red">Contrat perdu</button>
@@ -34,7 +37,8 @@
                 </div>
 
                 <div class="flex flex-col items-center gap-2">
-                    <input type="number" v-model.number="roundB" min="0" max="162" class="border rounded-lg p-2 dark:bg-gray-700 w-28 text-center" />
+                    <input type="number" v-model.number="roundB" min="0" max="162"
+                        class="border rounded-lg p-2 dark:bg-gray-700 w-28 text-center" />
                     <div class="flex gap-2">
                         <button @click="capot('B')" class="quick">Capot</button>
                         <button @click="contratPerdu('B')" class="quick red">Contrat perdu</button>
@@ -67,11 +71,13 @@
                         <td>{{ i + 1 }}</td>
 
                         <td>
-                            <input type="number" v-model.number="r.a" @input="normalizeRound(i, 'A')" class="w-20 text-center border rounded" />
+                            <input type="number" v-model.number="r.a" @input="normalizeRound(i, 'A')"
+                                class="w-20 text-center border rounded" />
                         </td>
 
                         <td>
-                            <input type="number" v-model.number="r.b" @input="normalizeRound(i, 'B')" class="w-20 text-center border rounded" />
+                            <input type="number" v-model.number="r.b" @input="normalizeRound(i, 'B')"
+                                class="w-20 text-center border rounded" />
                         </td>
 
                         <td>
@@ -148,10 +154,10 @@ function deleteRound(index) {
 
 function capot(team) {
     if (team === 'A') {
-        roundA.value = TOTAL_POINTS;
+        roundA.value = 250;
         roundB.value = 0;
     } else {
-        roundB.value = TOTAL_POINTS;
+        roundB.value = 250;
         roundA.value = 0;
     }
 }
@@ -180,15 +186,18 @@ function reset() {
     padding: 4px 10px;
     border-radius: 8px;
 }
+
 .quick.red {
     background: #f97316;
 }
+
 .main {
     background: #22c55e;
     color: white;
     padding: 8px 14px;
     border-radius: 8px;
 }
+
 .danger {
     background: #ef4444;
     color: white;

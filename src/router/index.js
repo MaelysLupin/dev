@@ -84,6 +84,11 @@ const router = createRouter({
                     component: () => import('@/views/pages/Recettes/Classique/PatesBolo.vue')
                 },
                 {
+                    path: '/pages/VinaigretteBalsamique',
+                    name: 'Vinaigrette Balsamique',
+                    component: () => import('@/views/pages/Recettes/Sauces/SauceVinaigrette.vue')
+                },
+                {
                     path: '/pages/errors',
                     name: 'Erreurs courantes',
                     component: () => import('@/views/pages/Java/JavaErrors.vue')
